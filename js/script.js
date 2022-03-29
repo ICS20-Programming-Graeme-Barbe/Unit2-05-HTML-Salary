@@ -3,11 +3,12 @@
 // JS functions for index.html
 
 
-// This function calculates the area and perimeter of the rectangle.
+// This function calculates the total amount of money and how much taxes you will pay
  'use strict'
 function calculate () {
-  let base = parseInt(document.getElementById('base-of-triangle').value)
-  let height = parseInt(document.getElementById('height-of-triangle').value)
-  let area = (base * height) / 2
-  document.getElementById('area').innerHTML = 'The area is ' + area + ' cm²'
+	const TAXE_RATE = (0.1805)
+	let hours = parseFloat(document.getElementById('hours').value)
+	let rate = parseFloat(document.getElementById('rate').value)
+	let total = (hours * rate)
+	document.getElementById('total').innerHTML = 'The area is ' + total + ' cm²'
 }
