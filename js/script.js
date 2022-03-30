@@ -11,6 +11,8 @@ function calculate () {
 	let rate = parseFloat(document.getElementById('rate').value)
 	let total = (hours * rate)
 	let tax = (total * TAX_RATE)
-	document.getElementById('total').innerHTML = 'Your salary would be ' + total.toFixed(2) + '$ without taxes' 
-	document.getElementById('tax').innerHTML = 'The government will take ' + tax.toFixed(2) + '$'
+	let home_pay = (total - tax)
+	document.getElementById('total').innerHTML = 'Your salary would be $' + total.toFixed(2) + ' without taxes' 
+	document.getElementById('tax').innerHTML = 'The government will take $' + tax.toFixed(2)
+	document.getElementById('home_pay').innerHTML = 'You will take home $' + home_pay.toFixed(2)
 }
